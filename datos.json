@@ -1,0 +1,34 @@
+{
+  "contacto": {
+    "telefono": "56912345678",
+    "instagram": "ecoboost_dpf",
+    "email": "contacto@ecoboostdpf.cl"
+  },
+  "textos": {
+    "hero_titulo": "La solución que potencia tu motor",
+    "hero_subtitulo": "Servicio de mecánica especializada a domicilio. Diagnóstico de precisión, mantención y regeneración DPF sin moverte de casa.",
+    "nosotros_titulo": "Sobre Nosotros",
+    "nosotros_descripcion_1": "En Eco-Boost DPF nos especializamos en devolverle el rendimiento original a tu vehículo. Entendemos que tu tiempo es valioso, por lo que llevamos un taller de alta tecnología directo a tu hogar o lugar de trabajo.",
+    "nosotros_descripcion_2": "Con años de experiencia en sistemas de escape, filtros de partículas (DPF), inyección y mecánica preventiva, garantizamos un diagnóstico transparente y un trabajo profesional con repuestos de primer nivel."
+  },
+  "trabajos": [
+    {
+      "titulo": "Limpieza Química DPF",
+      "descripcion": "Recuperación de potencia y eliminación de testigo de motor en terreno.",
+      "imagen": "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80",
+      "categoria": "DPF"
+    },
+    {
+      "titulo": "Diagnóstico por Escáner",
+      "descripcion": "Lectura avanzada de códigos de falla y regeneración forzada de filtros.",
+      "imagen": "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=600&q=80",
+      "categoria": "Diagnóstico"
+    },
+    {
+      "titulo": "Mantenimiento General",
+      "descripcion": "Cambio de aceite sintético, filtros y puesta a punto integral.",
+      "imagen": "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=600&q=80",
+      "categoria": "Mecánica"
+    }
+  ]
+}
