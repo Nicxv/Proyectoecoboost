@@ -4,7 +4,6 @@
     "instagram": "ecoboost_dpf",
     "email": "contacto@ecoboostdpf.cl"
   },
-  
   "textos": {
     "hero_titulo": "La solución que potencia tu motor",
     "hero_subtitulo": "Servicio de mecánica especializada a domicilio en Santiago. Diagnóstico de precisión, mantención preventiva y reparación sin moverte de tu hogar u oficina.",
@@ -12,7 +11,6 @@
     "nosotros_descripcion_1": "En EcoBoost Móvil entendemos que tu tiempo es valioso. Nacimos para transformar el servicio automotriz en Santiago, llevando la calidad y experiencia de un taller especializado directamente a la puerta de tu casa o lugar de trabajo.",
     "nosotros_descripcion_2": "Ofrecemos soluciones integrales para autos, camionetas y camiones, con especialidad en la línea Cummins, embragues, cambio de baterías y tren delantero. Llevamos diagnóstico avanzado y herramientas de nivel profesional a donde nos necesites."
   },
-
   "trabajos": [
     {
       "titulo": "Limpieza Química DPF",
@@ -32,5 +30,10 @@
       "imagen": "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=600&q=80",
       "categoria": "Mecánica"
     }
-  ]
+  ],
+  "textos.hero_titulo": "Prueba de titulo",
+  "textos.hero_subtitulo": "sss",
+  "textos.nosotros_titulo": "sss",
+  "textos.nosotros_descripcion_1": "sss",
+  "textos.nosotros_descripcion_2": "sss"
 }
