@@ -11,10 +11,14 @@ collections:
     files:
       - file: "datos.json"
         label: "Textos y Configuración"
-        name: "textos"
+        name: "configuracion"
         fields:
-          - { label: "Título Principal", name: "textos.hero_titulo", widget: "string" }
-          - { label: "Subtítulo Principal", name: "textos.hero_subtitulo", widget: "text" }
-          - { label: "Título Nosotros", name: "textos.nosotros_titulo", widget: "string" }
-          - { label: "Descripción 1 Nosotros", name: "textos.nosotros_descripcion_1", widget: "text" }
-          - { label: "Descripción 2 Nosotros", name: "textos.nosotros_descripcion_2", widget: "text" }
+          - label: "Textos de la Web"
+            name: "textos"
+            widget: "object"
+            fields:
+              - { label: "Título Principal", name: "hero_titulo", widget: "string" }
+              - { label: "Subtítulo Principal", name: "hero_subtitulo", widget: "text" }
+              - { label: "Título Nosotros", name: "nosotros_titulo", widget: "string" }
+              - { label: "Descripción 1 Nosotros", name: "nosotros_descripcion_1", widget: "text" }
+              - { label: "Descripción 2 Nosotros", name: "nosotros_descripcion_2", widget: "text" }
