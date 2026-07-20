@@ -75,7 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const instagramUser = data.contacto.instagram;
       const correo = data.contacto.email;
 
-      const msjWa = encodeURIComponent("Hola Eco-Boost DPF, necesito una cotización para mi vehículo.");
+      // CAMBIO AQUÍ: Nombre actualizado a EcoBoost Móvil sin mención a DPF
+      const msjWa = encodeURIComponent("Hola EcoBoost Móvil, necesito una cotización para mi vehículo.");
       
       whatsappLinks.forEach(link => {
         link.href = `https://wa.me/${telefono}?text=${msjWa}`;
