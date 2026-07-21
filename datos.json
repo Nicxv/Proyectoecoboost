@@ -1,12 +1,12 @@
 {
   "contacto": {
-    "telefono": "56935553959",
+    "telefono": "56987456321",
     "instagram": "ecoboost_movil",
     "email": "contacto@ecoboostdpf.cl"
   },
   "textos": {
-    "hero_titulo": "La solución que potencia tu motor prueba 2",
-    "hero_subtitulo": "Servicio de mecánica especializada a domicilio en Santiago. Diagnóstico de precisión, mantención preventiva y reparación sin moverte de tu hogar u oficina. pruebita 2",
+    "hero_titulo": "La solución que potencia tu motor",
+    "hero_subtitulo": "Servicio de mecánica especializada a domicilio en Santiago. Diagnóstico de precisión, mantención preventiva y reparación sin moverte de tu hogar u oficina.",
     "nosotros_titulo": "Sobre Nosotros",
     "nosotros_descripcion_1": "En EcoBoost Móvil entendemos que tu tiempo es valioso. Nacimos para transformar el servicio automotriz en Santiago, llevando la calidad y experiencia de un taller especializado directamente a la puerta de tu casa o lugar de trabajo.",
     "nosotros_descripcion_2": "Ofrecemos soluciones integrales para autos, camionetas y camiones, con especialidad en la línea Cummins, embragues, cambio de baterías y tren delantero. Llevamos diagnóstico avanzado y herramientas de nivel profesional a donde nos necesites."
@@ -15,7 +15,7 @@
     {
       "titulo": "Scanner vehículo",
       "descripcion": "escaneo de vehículo completo ",
-      "imagen": "images/whatsapp-image-2026-07-14-at-9.56.15-pm.jpeg",
+      "imagen": "https://dghqs88jwcgws.cloudfront.net/wp-content/uploads/2025/09/mecanico_1024x600.jpg?x31186",
       "categoria": "Scanner"
     },
     {
