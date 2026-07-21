@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
+# Ruta donde se guardan y leen las imágenes en tu proyecto
 media_folder: "images"
 public_folder: "images"
 
@@ -10,15 +11,35 @@ collections:
     label: "Contenido de la Web"
     files:
       - file: "datos.json"
-        label: "Textos y Configuración"
+        label: "Textos y Configuración General"
         name: "configuracion"
         fields:
-          - label: "Textos de la Web"
+          # --- SECCIÓN TEXTOS ---
+          - label: "Textos Principales"
             name: "textos"
             widget: "object"
             fields:
-              - { label: "Título Principal", name: "hero_titulo", widget: "string" }
-              - { label: "Subtítulo Principal", name: "hero_subtitulo", widget: "text" }
+              - { label: "Título Principal (Hero)", name: "hero_titulo", widget: "string" }
+              - { label: "Subtítulo Principal (Hero)", name: "hero_subtitulo", widget: "text" }
               - { label: "Título Nosotros", name: "nosotros_titulo", widget: "string" }
               - { label: "Descripción 1 Nosotros", name: "nosotros_descripcion_1", widget: "text" }
               - { label: "Descripción 2 Nosotros", name: "nosotros_descripcion_2", widget: "text" }
+
+          # --- SECCIÓN CONTACTO ---
+          - label: "Datos de Contacto"
+            name: "contacto"
+            widget: "object"
+            fields:
+              - { label: "Teléfono (WhatsApp sin +)", name: "telefono", widget: "string" }
+              - { label: "Usuario de Instagram", name: "instagram", widget: "string" }
+              - { label: "Correo Electrónico", name: "email", widget: "string" }
+
+          # --- SECCIÓN TRABAJOS / PORTAFOLIO ---
+          - label: "Galería de Trabajos"
+            name: "trabajos"
+            widget: "list"
+            fields:
+              - { label: "Título del Trabajo", name: "titulo", widget: "string" }
+              - { label: "Categoría", name: "categoria", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - { label: "Imagen", name: "imagen", widget: "image" }
