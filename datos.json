@@ -1,7 +1,7 @@
 {
   "contacto": {
     "telefono": "56912345678",
-    "instagram": "ecoboost_dpf",
+    "instagram": "ecoboost_movil",
     "email": "contacto@ecoboostdpf.cl"
   },
   "textos": {
@@ -13,15 +13,15 @@
   },
   "trabajos": [
     {
-      "titulo": "Limpieza Química DPF",
-      "descripcion": "Recuperación de potencia y eliminación de testigo de motor en terreno.",
-      "imagen": "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=600&q=80",
-      "categoria": "DPF"
+      "titulo": "Scanner vehículo",
+      "descripcion": "escaneo de vehículo completo ",
+      "imagen": "images/whatsapp-image-2026-07-14-at-9.56.15-pm.jpeg",
+      "categoria": "Scanner"
     },
     {
       "titulo": "Diagnóstico por Escáner",
       "descripcion": "Lectura avanzada de códigos de falla y regeneración forzada de filtros.",
-      "imagen": "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=600&q=80",
+      "imagen": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_05a99b23df054e0eb2c93b3885eaa13e.jpg",
       "categoria": "Diagnóstico"
     },
     {
