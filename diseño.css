@@ -406,7 +406,7 @@ a {
 }
 
 /* ========================================= */
-/* NUEVA SECCIÓN: Estilos de Servicios */
+/* SECCIÓN: Estilos de Servicios (Completo) */
 /* ========================================= */
 .servicios {
   padding: 100px 0;
@@ -418,14 +418,14 @@ a {
 
 .services-badge {
   display: inline-block;
-  background-color: rgba(0, 102, 255, 0.15);
-  color: var(--accent-blue);
+  background-color: rgba(0, 255, 102, 0.15); /* Fondo verde */
+  color: var(--accent);                       /* Texto verde eco */
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  border: 1px solid rgba(0, 102, 255, 0.3);
+  border: 1px solid rgba(0, 255, 102, 0.3);  /* Borde verde */
   text-align: center;
 }
 
@@ -452,7 +452,7 @@ a {
   overflow: hidden;
 }
 
-/* Tarjeta Destacada de DPF (La especialidad principal) */
+/* Tarjeta Destacada */
 .service-category-card.highlight-card {
   border-color: rgba(0, 255, 102, 0.25);
   background: linear-gradient(145deg, var(--bg-card) 0%, rgba(0, 255, 102, 0.02) 100%);
@@ -492,27 +492,41 @@ a {
   font-weight: 700;
 }
 
+/* --- ÍCONO DE CABECERA (Llave, Tuerca, Batería, etc.) --- */
 .category-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.05);
   color: var(--text-main);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  flex-shrink: 0;
 }
 
 .category-icon.green {
-  background-color: rgba(0, 255, 102, 0.1);
-  color: var(--accent);
+  background-color: rgba(0, 255, 102, 0.12);
+  color: var(--accent, #00ff66);
 }
 
 .category-icon.blue {
-  background-color: rgba(0, 102, 255, 0.1);
-  color: var(--accent-blue);
+  background-color: rgba(0, 102, 255, 0.12);
+  color: var(--accent-blue, #0066ff);
 }
 
+/* Control para renderizado de SVG en la cabecera */
+.category-icon i,
+.category-icon svg {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- LISTA DE SERVICIOS Y CHECKS VERDES --- */
 .service-list {
   list-style: none;
   display: flex;
@@ -532,18 +546,19 @@ a {
   color: var(--text-main);
 }
 
-.service-list li i {
-  color: var(--accent);
-  width: 16px;
-  height: 16px;
+/* Forzado de color verde para TODOS los checks en cualquier tarjeta */
+.service-list li i,
+.service-list li svg {
+  color: var(--accent, #00ff66) !important;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
   margin-top: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  stroke-width: 2.5px;
 }
-
-.service-category-card:not(.highlight-card) .service-list li i {
-  color: var(--accent-blue);
-}
-
 /* Portafolio Trabajos */
 .trabajos {
   padding: 100px 0;

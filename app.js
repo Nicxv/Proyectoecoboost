@@ -73,32 +73,44 @@ document.addEventListener('DOMContentLoaded', () => {
       if (instagramLink) instagramLink.href = `https://instagram.com/${instagramUser}`;
       if (emailLink) emailLink.href = `mailto:${correo}?subject=Cotización%20Mecánica%20a%20Domicilio`;
 
-      // 3. Renderizar Servicios
+      // Renderizar Servicios
       if (servicesGrid && data.servicios) {
-        servicesGrid.innerHTML = '';
-        
-        data.servicios.forEach(servicio => {
-          const highlightClass = servicio.destacado ? 'highlight-card' : '';
-          const colorClass = servicio.color_clase ? servicio.color_clase : '';
+  servicesGrid.innerHTML = '';
+  
+  data.servicios.forEach(servicio => {
+    const highlightClass = servicio.destacado ? 'highlight-card' : '';
+    const colorClass = servicio.color_clase || 'green';
+    const iconName = servicio.icono || 'wrench';
 
-          const itemsHtml = servicio.items.map(item => `
-            <li><i data-lucide="check"></i> ${item}</li>
-          `).join('');
+    // Generar la lista con el checkmark verde (check-circle2)
+    const itemsHtml = servicio.items.map(item => `
+      <li>
+        <i data-lucide="check-circle-2"></i>
+        <span>${item}</span>
+      </li>
+    `).join('');
 
-          const serviceCard = `
-            <div class="service-category-card ${highlightClass}">
-              <div class="category-header">
-                <div class="category-icon ${colorClass}"><i data-lucide="${servicio.icono}"></i></div>
-                <h3>${servicio.titulo}</h3>
-              </div>
-              <ul class="service-list">
-                ${itemsHtml}
-              </ul>
-            </div>
-          `;
-          servicesGrid.insertAdjacentHTML('beforeend', serviceCard);
-        });
-      }
+    const serviceCard = `
+      <div class="service-category-card ${highlightClass}">
+        <div class="category-header">
+          <div class="category-icon ${colorClass}">
+            <i data-lucide="${iconName}"></i>
+          </div>
+          <h3>${servicio.titulo}</h3>
+        </div>
+        <ul class="service-list">
+          ${itemsHtml}
+        </ul>
+      </div>
+    `;
+    servicesGrid.insertAdjacentHTML('beforeend', serviceCard);
+  });
+
+  // RE-INICIALIZACIÓN OBLIGATORIA DE LUCIDE ICONS TRAS INYECTAR HTML
+  if (window.lucide) {
+    lucide.createIcons();
+  }
+}
 
       // 4. Renderizar Portafolio Dinámico
       if (portfolioGrid && data.trabajos) {

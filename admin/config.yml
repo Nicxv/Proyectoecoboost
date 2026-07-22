@@ -33,19 +33,43 @@ collections:
               - { label: "Usuario de Instagram", name: "instagram", widget: "string" }
               - { label: "Correo Electrónico", name: "email", widget: "string" }
 
-          # --- SERVICIOS ---
+         # --- SECCIÓN DE SERVICIOS ---
           - label: "Sección de Servicios"
             name: "servicios"
             widget: "list"
             fields:
-              - { label: "Nombre de la Categoría/Servicio", name: "titulo", widget: "string" }
-              - { label: "Nombre del Icono (Lucide: activity, wrench, shield, cpu, etc.)", name: "icono", widget: "string", default: "wrench" }
-              - { label: "Color del Icono (opciones: green, blue, o dejar vacío)", name: "color_clase", widget: "string", required: false }
-              - { label: "¿Tarjeta Destacada?", name: "destacado", widget: "boolean", default: false }
+              - { label: "Título de la Categoría", name: "titulo", widget: "string" }
+              
+              # MENÚ DESPLEGABLE CON ÍCONOS MECÁNICOS PREDEFINIDOS
+              - label: "Ícono de Cabecera"
+                name: "icono"
+                widget: "select"
+                options:
+                  - { label: "🔧 Llave Inglesa (Mecánica General)", value: "wrench" }
+                  - { label: "⚙️ Engranaje / Tuerca (Sistemas)", value: "settings" }
+                  - { label: "🛞 Disco de Freno (Frenos / Tren D.)", value: "disc" }
+                  - { label: "🔋 Batería (Electricidad)", value: "battery-charging" }
+                  - { label: "💻 Escáner / CPU (Electrónica)", value: "cpu" }
+                  - { label: "🛡️ Escudo / Inspección", value: "shield-check" }
+                  - { label: "🚚 Camión / Flotas", value: "truck" }
+                  - { label: "📈 Diagnóstico DPF / Motor", value: "activity" }
+                default: "wrench"
+
+              - label: "Estilo del Ícono"
+                name: "color_clase"
+                widget: "select"
+                options:
+                  - { label: "Fondo Verde Eco", value: "green" }
+                  - { label: "Fondo Azul Técnico", value: "blue" }
+                  - { label: "Fondo Gris Neutro", value: "" }
+                default: "green"
+
+              - { label: "¿Tarjeta Destacada (Borde Verde)?", name: "destacado", widget: "boolean", default: false }
+
               - label: "Lista de Puntos/Servicios"
                 name: "items"
                 widget: "list"
-                field: { label: "Servicio", name: "item", widget: "string" }
+                field: { label: "Servicio u Opción", name: "item", widget: "string" }
 
           # --- TRABAJOS ---
           - label: "Galería de Trabajos"
