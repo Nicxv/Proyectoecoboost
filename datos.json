@@ -13,12 +13,11 @@
   },
   "servicios": [
     {
-      "titulo": "Sistemas DPF & Diésel",
+      "titulo": "PRUEBA SERVICIOS",
       "icono": "activity",
       "color_clase": "green",
-      "destacado": true,
+      "destacado": false,
       "items": [
-        "DPF Camionetas y Camiones",
         "Toda la línea de motores Cummins",
         "Servicio de Escáner Avanzado",
         "Regeneraciones Forzadas",
