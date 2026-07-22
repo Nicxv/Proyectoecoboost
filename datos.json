@@ -14,9 +14,9 @@
   "servicios": [
     {
       "titulo": "PRUEBA SERVICIOS",
-      "icono": "activity",
+      "icono": "SHIELD",
       "color_clase": "green",
-      "destacado": false,
+      "destacado": true,
       "items": [
         "Toda la línea de motores Cummins",
         "Servicio de Escáner Avanzado",
