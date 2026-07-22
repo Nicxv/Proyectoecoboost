@@ -5,7 +5,7 @@
     "email": "contacto@ecoboostdpf.cl"
   },
   "textos": {
-    "hero_titulo": "La solución que potencia tu motor prueba 10",
+    "hero_titulo": "La solución que potencia tu motor",
     "hero_subtitulo": "Servicio de mecánica especializada a domicilio en Santiago. Diagnóstico de precisión, mantención preventiva y reparación sin moverte de tu hogar u oficina.",
     "nosotros_titulo": "Sobre Nosotros",
     "nosotros_descripcion_1": "En EcoBoost Móvil entendemos que tu tiempo es valioso. Nacimos para transformar el servicio automotriz en Santiago, llevando la calidad y experiencia de un taller especializado directamente a la puerta de tu casa o lugar de trabajo.",
@@ -13,11 +13,12 @@
   },
   "servicios": [
     {
-      "titulo": "PRUEBA SERVICIOS",
-      "icono": "SHIELD",
+      "titulo": "Sistemas DPF & Diésel",
+      "icono": "activity",
       "color_clase": "green",
       "destacado": true,
       "items": [
+        "DPF Camionetas y Camiones",
         "Toda la línea de motores Cummins",
         "Servicio de Escáner Avanzado",
         "Regeneraciones Forzadas",
@@ -39,8 +40,8 @@
     },
     {
       "titulo": "Seguridad y Suspensión",
-      "icono": "shield",
-      "color_clase": "",
+      "icono": "disc",
+      "color_clase": "green",
       "destacado": false,
       "items": [
         "Sistema de Frenos Integrales",
@@ -51,8 +52,8 @@
     },
     {
       "titulo": "Transmisión y Sistemas",
-      "icono": "cpu",
-      "color_clase": "",
+      "icono": "settings",
+      "color_clase": "blue",
       "destacado": false,
       "items": [
         "Reparación de Cajas de Cambio",
@@ -65,7 +66,7 @@
   "trabajos": [
     {
       "titulo": "Scanner vehículo",
-      "descripcion": "escaneo de vehículo completo ",
+      "descripcion": "Escaneo de vehículo completo y diagnóstico en terreno.",
       "imagen": "https://dghqs88jwcgws.cloudfront.net/wp-content/uploads/2025/09/mecanico_1024x600.jpg?x31186",
       "categoria": "Scanner"
     },
