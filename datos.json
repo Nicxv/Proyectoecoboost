@@ -11,6 +11,58 @@
     "nosotros_descripcion_1": "En EcoBoost Móvil entendemos que tu tiempo es valioso. Nacimos para transformar el servicio automotriz en Santiago, llevando la calidad y experiencia de un taller especializado directamente a la puerta de tu casa o lugar de trabajo.",
     "nosotros_descripcion_2": "Ofrecemos soluciones integrales para autos, camionetas y camiones, con especialidad en la línea Cummins, embragues, cambio de baterías y tren delantero. Llevamos diagnóstico avanzado y herramientas de nivel profesional a donde nos necesites."
   },
+  "servicios": [
+    {
+      "titulo": "Sistemas DPF & Diésel",
+      "icono": "activity",
+      "color_clase": "green",
+      "destacado": true,
+      "items": [
+        "DPF Camionetas y Camiones",
+        "Toda la línea de motores Cummins",
+        "Servicio de Escáner Avanzado",
+        "Regeneraciones Forzadas",
+        "Diagnóstico e Inyección Diésel"
+      ]
+    },
+    {
+      "titulo": "Mantención y Puesta a Punto",
+      "icono": "wrench",
+      "color_clase": "blue",
+      "destacado": false,
+      "items": [
+        "Mantenciones por Kilometraje",
+        "Cambio de Kit de Distribución",
+        "Reemplazo de Baterías",
+        "Preparación y Revisión Técnica",
+        "Servicio de Chequeo Pre-Compra"
+      ]
+    },
+    {
+      "titulo": "Seguridad y Suspensión",
+      "icono": "shield",
+      "color_clase": "",
+      "destacado": false,
+      "items": [
+        "Sistema de Frenos Integrales",
+        "Reparación de Tren Delantero",
+        "Reemplazo de Amortiguadores",
+        "Diagnóstico de ruidos y holguras"
+      ]
+    },
+    {
+      "titulo": "Transmisión y Sistemas",
+      "icono": "cpu",
+      "color_clase": "",
+      "destacado": false,
+      "items": [
+        "Reparación de Cajas de Cambio",
+        "Reemplazo de Embragues",
+        "Diagnóstico de Electricidad automotriz",
+        "Reparaciones de fallas complejas"
+      ]
+    }
+  ],
   "trabajos": [
     {
       "titulo": "Scanner vehículo",

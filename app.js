@@ -1,23 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Inicializamos librería de iconos Lucide
   if (window.lucide) {
     lucide.createIcons();
   }
 
-  // Elementos del DOM a inyectar
   const heroTitle = document.getElementById('hero-title');
   const heroSubtitle = document.getElementById('hero-subtitle');
   const nosotrosTitulo = document.getElementById('nosotros-titulo');
   const nosotrosDesc1 = document.getElementById('nosotros-desc-1');
   const nosotrosDesc2 = document.getElementById('nosotros-desc-2');
   const portfolioGrid = document.getElementById('portfolio-grid');
+  const servicesGrid = document.getElementById('services-grid');
   
-  // Elementos de Links Dinámicos
   const whatsappLinks = document.querySelectorAll('.js-whatsapp-link');
   const instagramLink = document.getElementById('js-instagram-link');
   const emailLink = document.getElementById('js-email-link');
 
-  // Funciones del Menú Mobile
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
@@ -33,66 +30,79 @@ document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
     });
 
-    // Cerrar menú al hacer click en un link móvil
     document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        closeMenu();
-      });
+      link.addEventListener('click', closeMenu);
     });
     
-    // Cerrar menú si el usuario hace scroll
     window.addEventListener('scroll', () => {
-      if (navMenu.classList.contains('active')) {
-        closeMenu();
-      }
+      if (navMenu.classList.contains('active')) closeMenu();
     });
 
     function closeMenu() {
-        navMenu.classList.remove('active');
-        menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
-        lucide.createIcons();
+      navMenu.classList.remove('active');
+      menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
+      lucide.createIcons();
     }
   }
 
-  // Fetch de Datos Dinámicos
+  // Carga de Datos desde datos.json
   fetch('datos.json')
     .then(response => {
-      if (!response.ok) {
-        throw new Error('Error al cargar la base de datos local');
-      }
+      if (!response.ok) throw new Error('Error al cargar la base de datos local');
       return response.json();
     })
     .then(data => {
-      // 1. Inyectar Textos Generales
+      // 1. Textos Generales
       if (heroTitle) heroTitle.textContent = data.textos.hero_titulo;
       if (heroSubtitle) heroSubtitle.textContent = data.textos.hero_subtitulo;
       if (nosotrosTitulo) nosotrosTitulo.textContent = data.textos.nosotros_titulo;
       if (nosotrosDesc1) nosotrosDesc1.textContent = data.textos.nosotros_descripcion_1;
       if (nosotrosDesc2) nosotrosDesc2.textContent = data.textos.nosotros_descripcion_2;
 
-      // 2. Configurar Links Inteligentes
+      // 2. Links de Contacto
       const telefono = data.contacto.telefono;
       const instagramUser = data.contacto.instagram;
       const correo = data.contacto.email;
 
-      // CAMBIO AQUÍ: Nombre actualizado a EcoBoost Móvil sin mención a DPF
       const msjWa = encodeURIComponent("Hola EcoBoost Móvil, necesito una cotización para mi vehículo.");
       
       whatsappLinks.forEach(link => {
         link.href = `https://wa.me/${telefono}?text=${msjWa}`;
       });
 
-      if (instagramLink) {
-        instagramLink.href = `https://instagram.com/${instagramUser}`;
+      if (instagramLink) instagramLink.href = `https://instagram.com/${instagramUser}`;
+      if (emailLink) emailLink.href = `mailto:${correo}?subject=Cotización%20Mecánica%20a%20Domicilio`;
+
+      // 3. Renderizar Servicios
+      if (servicesGrid && data.servicios) {
+        servicesGrid.innerHTML = '';
+        
+        data.servicios.forEach(servicio => {
+          const highlightClass = servicio.destacado ? 'highlight-card' : '';
+          const colorClass = servicio.color_clase ? servicio.color_clase : '';
+
+          const itemsHtml = servicio.items.map(item => `
+            <li><i data-lucide="check"></i> ${item}</li>
+          `).join('');
+
+          const serviceCard = `
+            <div class="service-category-card ${highlightClass}">
+              <div class="category-header">
+                <div class="category-icon ${colorClass}"><i data-lucide="${servicio.icono}"></i></div>
+                <h3>${servicio.titulo}</h3>
+              </div>
+              <ul class="service-list">
+                ${itemsHtml}
+              </ul>
+            </div>
+          `;
+          servicesGrid.insertAdjacentHTML('beforeend', serviceCard);
+        });
       }
 
-      if (emailLink) {
-        emailLink.href = `mailto:${correo}?subject=Cotización%20Mecánica%20a%20Domicilio`;
-      }
-
-      // 3. Renderizar Portafolio Dinámico
+      // 4. Renderizar Portafolio Dinámico
       if (portfolioGrid && data.trabajos) {
-        portfolioGrid.innerHTML = ''; // Limpiar cargando original
+        portfolioGrid.innerHTML = '';
         
         data.trabajos.forEach(trabajo => {
           const cardHtml = `
@@ -110,6 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
           portfolioGrid.insertAdjacentHTML('beforeend', cardHtml);
         });
       }
+
+      // IMPORTANTE: Volver a compilar los iconos de Lucide cargados dinámicamente
+      if (window.lucide) {
+        lucide.createIcons();
+      }
     })
     .catch(error => {
       console.error('Error inyectando datos dinámicos:', error);
@@ -117,9 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ==========================================
-// REDIRECCIÓN DE NETLIFY IDENTITY PARA EL CMS
-// ==========================================
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on("init", user => {
     if (!user) {
