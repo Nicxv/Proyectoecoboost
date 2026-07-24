@@ -1,8 +1,8 @@
 {
   "contacto": {
-    "telefono": "56987456321",
+    "telefono": "+56962191010",
     "instagram": "ecoboost_movil",
-    "email": "contacto@ecoboostdpf.cl"
+    "email": "Ecoboostdpf@gmail.com"
   },
   "textos": {
     "hero_titulo": "La solución que potencia tu motor",
@@ -25,10 +25,10 @@
       ]
     },
     {
-      "titulo": "Mantención y Puesta a Punto",
+      "titulo": "Mantención y Reparación integral  ",
       "icono": "wrench",
-      "color_clase": "blue",
-      "destacado": false,
+      "color_clase": "green",
+      "destacado": true,
       "items": [
         "Mantenciones por Kilometraje",
         "Cambio de Kit de Distribución",
@@ -77,7 +77,7 @@
     },
     {
       "titulo": "Mantenimiento General",
-      "descripcion": "Cambio de aceite sintético, filtros y puesta a punto integral.",
+      "descripcion": "Cambio de aceite sintético, filtros y mecanica integral. Tren delantero servicio dpf fap addblue electrónica  off ",
       "imagen": "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=600&q=80",
       "categoria": "Mecánica"
     }
